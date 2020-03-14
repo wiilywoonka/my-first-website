@@ -1,28 +1,52 @@
+:root {
+  --color-bar: hsl(300, 100%, 80%); 
+  --color-bar2: hsl(32, 100%, 80%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+li {
+  margin-right: 30px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  line-height: 1.5rem;
+  text-decoration: underline;
+}
+
 .navbar-fixed {
   width: 100vw;
   height: 60px;
   position: fixed;
-  top: 0;
+  top: 0; 
   left: 0;
   border: solid 1px #000;
-
+  background: linear-gradient(45deg, var(--color-bar), var(--color-bar2));
 }
 
 .container {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .container div {
-  border: solid 1px red;
   padding: 10px;
+  text-transform: capitalize;
+}
+
+.title {
+  font-size: 30px;
 }
 
 .container ul {
@@ -31,6 +55,9 @@
 }
 
 
+
 .containeer {
-  display: none;
+  
+  position: relative;
+  top: 200px;
 }
