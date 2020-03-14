@@ -1,5 +1,5 @@
 :root {
-  --color-bar: hsl(300, 100%, 80%); 
+  --color-bar: hsl(180, 100%, 80%); 
   --color-bar2: hsl(32, 100%, 80%);
 }
 
@@ -19,11 +19,14 @@ a {
 }
 
 a:hover {
-  line-height: 1.5rem;
   text-decoration: underline;
 }
 
 .navbar-fixed {
+  animation-name: bar;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
   width: 100vw;
   height: 60px;
   position: fixed;
@@ -55,9 +58,26 @@ a:hover {
 }
 
 
+@keyframes bar{
+  0% {
+    top: 0px;
+  } 
+
+  50% {
+    background: linear-gradient(45deg, red, green);
+    top: 100px;
+  }
+
+  100% {
+    background-color: brown;
+    top: 0;
+  }
+}
+
+
 
 .containeer {
   
   position: relative;
-  top: 200px;
+  top: 500px;
 }
